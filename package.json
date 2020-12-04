@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/jasmine": "^3.6.2",
     "@types/node": "^14.14.10",
     "glob": "^7.1.6",
     "jasmine": "^3.6.3",

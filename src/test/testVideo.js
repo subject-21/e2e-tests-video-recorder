@@ -2,17 +2,17 @@
 let page, browser;
 const puppeteer = require("puppeteer");
 const Recorder = require("../recorder/record");
-const rec = new Recorder("videoTest", "C:/Users/Neili/OneDrive/Documents/projects/e2e-tests-video-recorder/results");
+const rec = new Recorder("testing1", "C:/Users/Neili/OneDrive/Documents/projects/e2e-tests-video-recorder/results");
 
 describe("Video test", () => {
     beforeAll(() => {
         rec.start();
     });
     afterAll(() => {
-        //rec.stop();
+        rec.stop();
     })
     it("should get the page", async () => {
-        browser = await puppeteer.launch({ executablePath: "C:/Users/Neili/AppData/Local/Google/Chrome/Application/chrome.exe", headless: false });
+        browser = await puppeteer.launch({ executablePath: "C:/Users/Neili/AppData/Local/Google/Chrome/Application/chrome.exe", headless: false, slowMo: 100 });
         const pages = await browser.pages();
         page = await pages[0];
         await page.goto("https://www.google.com");

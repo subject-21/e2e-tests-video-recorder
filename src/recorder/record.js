@@ -19,11 +19,18 @@ class Recorder {
         this.ffmpeg = spawn("ffmpeg", command);
         console.log("Video Recorder started...");
         this.ffmpeg.on('close', (code) => {
+            console.log(`Recording ended with code ${code}`);
             console.log(`The video of the test created in: ${path.dirname(this.fullTargetPath)}\nWith the name: ${path.basename(this.fullTargetPath)}`);
         });
         this.ffmpeg.on('error', (err) => {
             console.log(`err ${err}`);
         });
+        this.ffmpeg.stdout.on('data', (data) => {
+            console.log(`stdout: ${data}`);
+          });
+          this.ffmpeg.stderr.on('data', (data) => {
+            console.error(`stderr: ${data}`);
+          });
     }
 
     stop() {
