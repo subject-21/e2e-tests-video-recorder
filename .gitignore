@@ -108,3 +108,4 @@ temp*.js
 results/
 
 .vscode/
+reporter-results/

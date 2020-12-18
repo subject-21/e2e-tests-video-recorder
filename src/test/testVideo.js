@@ -13,7 +13,7 @@ describe("Video test", () => {
     // })
     it("should get the page", async () => {
         browser = await puppeteer.launch({
-            executablePath: "C:/Users/Neili/AppData/Local/Google/Chrome/Application/chrome.exe", headless: false, slowMo: 300,
+            executablePath: "C:/Users/Neili/AppData/Local/Google/Chrome/Application/chrome.exe", headless: false, slowMo: 10,
             defaultViewport: null,
             args: ["--start-maximized"]
         });
