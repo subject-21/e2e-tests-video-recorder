@@ -1,15 +1,14 @@
 const { spawn } = require('child_process');
 const path = require("path");
-const verifyData = require("./verifyData");
-let buff;
-// **** TODO: Add option to create desination folder itsself if not exists **** \\
+const fs = require("fs");
 class Recorder {
-    /** @param {String} videoName @param {String} targetFolderPath - destination folder @param {Number} videoFps - video framerate @param {String} videoFormat - "mp4" | "mkv" */
-    constructor(videoName, targetFolderPath, videoFps = 30, videoFormat = "mkv") {
-        const validName = verifyData(videoName, targetFolderPath);
-        const finalName = validName ? validName : videoName;
-
-        this.fullTargetPath = path.join(targetFolderPath, finalName) + `.${videoFormat}`;
+    /** @param {String} targetFolderPath - destination folder @param {Number} videoFps - video framerate @param {"mov"| "mp4"| "m4a"| "3gp"| "3g2"| "mj2"| "psp"| "m4b"| "ism"| "ismv"| "isma"| "f4v"} videoFormat */
+    constructor(targetFolderPath, videoFps = 30, videoFormat = "mov") {
+        if (!fs.existsSync(targetFolderPath)){
+            fs.mkdirSync(targetFolderPath);
+        }
+        const videoName = `test@${new Date().toLocaleString().replace(/[\s,\.\:/\/]/g, '_')}.${videoFormat}`;
+        this.fullTargetPath = path.join(targetFolderPath, videoName);
         this.videoFps = videoFps;
         this.ffmpeg = {};
     }
