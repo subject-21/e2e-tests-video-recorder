@@ -2,8 +2,8 @@ const { spawn } = require('child_process');
 const path = require("path");
 const fs = require("fs");
 class Recorder {
-    /** @param {String} targetFolderPath - destination folder @param {Number} videoFps - video framerate @param {"mov"| "mp4"| "m4a"| "3gp"| "3g2"| "mj2"| "psp"| "m4b"| "ism"| "ismv"| "isma"| "f4v"} videoFormat */
-    constructor(targetFolderPath, videoFps = 30, videoFormat = "mov") {
+    /** @param {String} targetFolderPath - destination folder @param {Number} videoFps - video framerate @param {import("./recordTypes").Format} videoFormat */
+    constructor(targetFolderPath, videoFps = 30, videoFormat = "flv") {
         if (!fs.existsSync(targetFolderPath)){
             fs.mkdirSync(targetFolderPath);
         }
