@@ -1,11 +1,17 @@
 e2e tests video recorder
 ===========
 
-In order to use this you need to install ffmpeg on you machine
-https://ffmpeg.org/download.html
-## You also must add ffmpeg to path in system environment variables
+## Installation
 
-npm install e2e-tests-video-recorder
+This module is installed via npm:
+
+``` bash
+$ npm install e2e-tests-video-recorder
+```
+
+*Note:* In order to use this you need to install [ffmpeg](https://ffmpeg.org/download.html) on you machine,
+You also must add ffmpeg to path in system environment variables.
+
 
 ## Usage
 
