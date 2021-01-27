@@ -3,9 +3,6 @@
   "version": "1.0.1",
   "description": "Record your automation tests",
   "main": "src/recorder/record.js",
-  "scripts": {
-    "testRecordings": "node src/test/testRecordings.js"
-  },
   "author": "Joni Neilinger",
   "license": "ISC",
   "dependencies": {
