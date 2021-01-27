@@ -1,6 +1,6 @@
 {
   "name": "e2e-tests-video-recorder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Record your automation tests",
   "main": "src/recorder/record.js",
   "author": "Joni Neilinger",
