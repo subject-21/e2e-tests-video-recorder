@@ -1,20 +1,29 @@
 {
-  "name": "testff",
+  "name": "e2e-tests-video-recorder",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Record your automation tests",
+  "main": "src/recorder/record.js",
   "scripts": {
-    "test": "node node_modules/jasmine/bin/jasmine.js --config=jasmine.json"
+    "testRecordings": "node src/test/testRecordings.js"
   },
-  "author": "",
+  "author": "Joni Neilinger",
   "license": "ISC",
   "dependencies": {
-    "@types/jasmine": "^3.6.2",
-    "@types/node": "^14.14.10",
-    "allure-commandline": "^2.13.0",
-    "glob": "^7.1.6",
-    "jasmine": "^3.6.1",
-    "jasmine-allure-reporter": "^1.0.2",
-    "puppeteer": "^5.5.0"
-  }
+    "@types/node": "^14.14.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subject-21/e2e-tests-video-recorder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/subject-21/e2e-tests-video-recorder/issues"
+  },
+  "homepage": "https://github.com/subject-21/e2e-tests-video-recorder#README",
+  "keywords": [
+    "ffmpeg",
+    "jasmine",
+    "video",
+    "recorder",
+    "puppeteer"
+  ]
 }

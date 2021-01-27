@@ -32,5 +32,4 @@ Create Recorder instance and start recording
     
     afterAll(() => {
         rec.stop();
-    });
-    `````  
+    });  
