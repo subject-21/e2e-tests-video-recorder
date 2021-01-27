@@ -2,9 +2,8 @@
   "name": "e2e-tests-video-recorder",
   "version": "1.0.0",
   "description": "Record your automation tests",
-  "main": "index.js",
+  "main": "src/recorder/record.js",
   "scripts": {
-    "test": "node node_modules/jasmine/bin/jasmine.js --config=jasmine.json",
     "testRecordings": "node src/test/testRecordings.js"
   },
   "author": "Joni Neilinger",
@@ -19,5 +18,12 @@
   "bugs": {
     "url": "https://github.com/subject-21/e2e-tests-video-recorder/issues"
   },
-  "homepage": "https://github.com/subject-21/e2e-tests-video-recorder#README"
+  "homepage": "https://github.com/subject-21/e2e-tests-video-recorder#README",
+  "keywords": [
+    "ffmpeg",
+    "jasmine",
+    "video",
+    "recorder",
+    "puppeteer"
+  ]
 }
