@@ -11,10 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^14.14.10"
-  }, 
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/subject-21/e2e-tests-video-recorder.git"    
+    "url": "https://github.com/subject-21/e2e-tests-video-recorder.git"
   },
   "bugs": {
     "url": "https://github.com/subject-21/e2e-tests-video-recorder/issues"
