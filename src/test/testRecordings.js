@@ -1,5 +1,5 @@
 const Recorder = require("../recorder/record");
-const rec = new Recorder(require("path").join(__dirname, "results"));
+const rec = new Recorder("C:/Users/Neili/OneDrive/Documents/projects/e2e-tests-video-recorder/results", "mp4");
 
 rec.start();
 
