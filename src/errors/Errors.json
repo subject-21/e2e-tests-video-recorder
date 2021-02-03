@@ -1,0 +1,8 @@
+{
+    "Errors": [
+        {
+            "errName": "ffmpeg is not installed or not included in path of system environment variable",
+            "errMsg": "'ffmpeg' is not recognized as an internal or external command,\r\noperable program or batch file.\r\n"
+        }
+    ]
+}
